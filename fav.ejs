@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/nav.css">
+<style>
+	#search{
+		color: white;
+	}
+</style>
+</head>
+<body>
+	<div class="container-fluid" id="search">
+	<% include partials/nav.ejs %>
+	<h2>your favourite songs:</h2>
+	<table class="table table-hover">
+		<tr>
+			<th>S.No</th>
+			<th>Song Name</th>
+			<th>Artist Name</th>
+			<th>Year</th>
+			<th>Duration</th>
+		</tr>
+		<% for(var i=0;i<data.length;i++){ %>
+		<tr>
+			<td><%=(i+1)%></td>
+			<td><%=data[i].song_name %></td>
+			<td><%=data[i].artist_name %></td>
+			<td><%=data[i].year %></td>
+			<td><%=data[i].duration %></td>
+		</tr>
+		<% } %>
+	</table>
+</div>
+</body>

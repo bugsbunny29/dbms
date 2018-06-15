@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+    th,td{
+		color: white;
+	}
+	thead{
+	background: linear-gradient(to right, #ff6600 0%, #ff0066 66%);	
+	}
+	table{
+		margin-top: 20px;
+	}
+	.table tr:hover{
+		background: linear-gradient(to right, #ff6600 0%, #ff0066 66%);
+	}
+	h2{
+	background: linear-gradient(to right, #ff6600 0%, #ff0066 66%);	
+	}
+	#heading{
+		color:white;
+	}
+	.best{
+		color:white;
+		font-weight: bold;
+		font-style: italic;
+	}
+	#sort{
+   background: linear-gradient(to right, #ff6600 0%, #ff0066 66%); 
+   background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 5px;
+
+	}
+   #imgS{
+   	width:250px;
+   	height: 300px;
+   	margin-left:40px; 
+   }
+  #b0{
+  	background-color: black;
+  }
+  
+</style>
+</head>
+
+<body>
+	<% include partials/nav.ejs %>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-4">
+			<img id="imgS" src="<%=img%>" class="img-thumbnail" alt="Arijit" >
+		</div>
+		<div class="col-lg-8 details">
+			<p class="best">You are listening to :<p>
+			<h1 class="best">Best of <%=title%><h1>		
+			 <div class="dropdown">
+            <button id="sort" class="btn dropdown-toggle" type="button" data-toggle="dropdown">Sort By
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+            <li><a href="/info/sort/<%=route%>/<%=id%>/year">YEAR</a></li>
+            <li><a href="/info/sort/<%=route%>/<%=id%>/likes">POPULARITY</a></li>
+            <li><a href="/info/sort/<%=route%>/<%=id%>/duration">DURATION</a></li>
+            </ul>
+            </div>
+
+            </div>
+          </div>
+	<div class="row">
+		 <table class="table">
+		 	<thead>
+		 	<tr>
+		 		<th>#</th>
+		 		<th>Song Title</th>
+		 		<th>Year</th>
+		 		<th>Duration(min)</th>
+		 		<%if(user){%>
+		 		<th>Add To Favourites</th>
+		 		<%}%>
+
+		 	</tr>
+		 	</thead>
+		 	<tbody>
+		 	<% if(data.length){%>
+		 	<%for(var i=0;i<data.length;i++){%>
+
+		 	  <tr>
+		 		<td><%=(i+1)%></td>
+		 		<td><%=data[i].song_name%></td>
+		 		<td><%=data[i].year%></td>
+		 		<td><%=data[i].duration%></td>
+		 		 <%if(user){%>
+        <%if(data[i].isFav){%>
+        <td><a href="/addFav/<%=route%>/<%=id%>/<%=data[i].song_id%>"><i class="fa fa-heart" style="font-size:28px;color:red"></i></a></td>
+        <%}%>
+        <%if(!data[i].isFav){%>
+        <td><a href="/addFav/<%=route%>/<%=id%>/<%=data[i].song_id%>"><button class="btn" id="b1"></button></a></td>
+                <% } %>
+                <% } %>
+		 	  </tr>
+		 	  <%}%>
+		 	  <%}%>
+		 	</tbody>
+         </table>
+	</div>
+
+</div>
+</body>
+
+</html>
+

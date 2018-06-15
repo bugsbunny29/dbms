@@ -1,0 +1,16 @@
+body{
+	background:black;
+	font-weight: bold;
+	color:#fff;
+}
+.jumbo{
+	border-top:5px solid red;
+	border-bottom: 5px solid red;
+	width:100%;
+   background:rgb(18,18,18);
+}
+.cardbg{
+
+
+background: linear-gradient(to right, #ff6600 0%, #ff0066 66%);
+}

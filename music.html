@@ -1,0 +1,497 @@
+<!doctype html>
+<head>
+<title>music</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(https://i.pinimg.com/originals/b9/28/46/b92846239cc61777b751052d0b991e3b.jpg);
+    background-repeat: no-repeat;
+    background-position: -40% 50%;
+    background-attachment: fixed;
+    background-color:black;
+
+} 
+
+#logo{
+    margin-top:-10px;
+    height: 50px;
+    width:100px;
+}
+.cr{
+    height:500px;
+    width:100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #one{
+background-image:url("http://bcdn.newshunt.com/cmd/resize/400x400_60/fetchdata13/images/fb/91/42/fb914241a9450c2d3b1a52be8dcf4d6c.jpg");
+background-size: contain;
+  }
+  #two{
+background-image:url("https://i.ytimg.com/vi/D7w-v0zbV10/maxresdefault.jpg");
+background-size: contain;
+  }
+  #three{
+    background-image:url("https://d345cba086ha3o.cloudfront.net/wp-content/uploads/2016/11/14633014_1772516799654205_2535803331213666156_n.jpg");
+    background-size: contain;
+  }
+  #four{
+    background-image: url("https://i.ytimg.com/vi/3gRQ5a2nyAw/maxresdefault.jpg");
+    background-size: contain;
+  }
+  #artist{
+    margin-top: 50px;
+  }
+  .a{
+    margin-left:2px;
+    margin-right:15px;
+  }
+  .a img{
+    width: 200px;
+    height:250px;
+  }
+  .dropdown-menu{
+    background-color: black;
+  }
+  .dropdown-menu li a{
+    display: block;
+    width: 160px;
+    height:60px;
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .navbar{
+    margin-bottom: 30px;
+    border-top: 5px solid red;
+    background-color: black;
+    font-weight: bold;
+    font-size: 15px;
+  }
+ .navbar li a{
+    height: 60px;
+
+ }
+ .img-responsive{
+margin-top: 80px;
+ }
+.hovereffect {
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+  cursor: default;
+ }
+ .overlay {
+    width: 160px;
+    overflow: hidden;
+    position: relative;
+    bottom: 100px;
+}
+
+.hovereffect img {
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(1px);
+  -webkit-filter: grayscale(1) blur(1px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+ .hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+ .cat,.cat:hover,.cat:visited{
+    color: white;
+    text-decoration-line: none;
+    margin-left:200px; 
+}
+input,button{
+    margin-top:10px; 
+}
+
+.footer{
+    border-top: 3px solid #404040;
+    height: 300px;
+    background-color: #1e1e1e;
+    margin-top: 30px;
+    padding: 40px;
+    color: white;
+    font-weight: bolder;
+}
+.footer a,a:hover,a:visited{
+  text-decoration-line: none;
+  color:white;
+}
+ .ft {
+    font-size: 17px;
+    padding-bottom: 8px;
+}
+#fp{
+ margin-top:15px; 
+}
+#term{
+    position: relative;
+    top: 130px;
+}
+</style>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img id="logo" src="http://www.wuggle.co.uk/media/catalog/product/c/o/colourkssmihe1597_smiley_-_headphones_-_red1.jpg" width="100px"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">MY MUSIC <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#c1">ARTISTS</a></li>
+          <li><a href="#c2">STAR GALLERY</a></li>
+          <li><a href="#c3">HINDI MELODIES</a></li>
+          <li><a href="#c4">RETRO</a></li>
+          <li><a href="#c5">MOVIES</a></li>
+          <li><a href="#c6">INTERNATIONAL</a></li>
+        </ul>
+      </li>
+      <li><a href="#">SUBSCRIPTION</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <li><input type="text" placeholder="search"></li>
+      <li><button><span class="glyphicon glyphicon-search"></span></button></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+        <div class="container-fluid">
+    <div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators" >
+                            <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+                            <li data-target="#my-slider" data-slide-to="1"></li>
+                            <li data-target="#my-slider" data-slide-to="2"></li>
+                            <li data-target="#my-slider" data-slide-to="3"></li>
+                        </ol>
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="cr" id="one"></div>
+                               <div class="carousel-caption">
+                                    <h1>LATEST HIT</h1>
+                                    
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="cr" id="two"></div>
+                                 <div class="carousel-caption">
+                                    <h1>SONG OF THE WEEK</h1>
+                                    
+                                </div>
+                            </div>
+                            <div class="item">
+                                 <div class="cr" id="three"></div>
+                                 <div class="carousel-caption">
+                                    <h1>ARTIST OF THE WEEK</h1>
+                                    
+                                </div>
+                            </div>
+                            <div class="item">
+                                 <div class="cr" id="four"></div>
+                                 <div class="carousel-caption">
+                                    <h1>ALL TIME FAVOURITE</h1>
+                                </div>
+                            </div>
+    </div>
+    <a class="left carousel-control" href="#my-slider" role="button"  data-slide="prev">
+  </a>
+  <a class="right carousel-control" href="#my-slider" data-slide="next">
+  </a>
+    </div>
+    </div>
+    </div>
+<h4 id="artist"><a class="cat" name="c1" >ARTISTS</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-1" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect">
+                                <a href="#"><img class="img-responsive" src="public/images/arijit.jpg" alt="oops!"></a>
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>
+                                </div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="public/images/taylor swift.jpg" alt="oops!">
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>
+                                </div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="public/images/atif.jpg" alt="oops!">
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>
+                                </div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="public/images/charlie.jpg" alt="oops!">
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>   
+                                </div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="public/images/ar-rahman.jpg " alt="oops!"><div class="overlay">
+                                <h2>HOVER EFFECT</h2></div></div>
+                            </div>
+                          </div>
+    <a class="left carousel-control" href="#my-slider-1" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-1" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+    </div>
+    </div>                    
+    </div>
+    <h4><a class="cat" name="c2">STAR GALLERY</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-2" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://static.toiimg.com/photo/msid-58002368/58002368.jpg?56668" alt="oops!">
+                                <div class="overlay"><a href=""><h2>alia bhatt</h2></a></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://s3-ap-southeast-1.amazonaws.com/seenitcdn/328595937a487571d2.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="public/images/ranbir.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://images.indianexpress.com/2017/07/deepika-padukone11.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://images.mid-day.com/images/2017/aug/Varun-Dhawan-ddd.jpg" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+                          </div>
+    <a class="left carousel-control" href="#my-slider-2" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-2" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+     </div>
+     </div>                         
+    </div>
+    <h4><a class="cat" name="c3">HINDI MELODIES</a></h4>
+<div class="row">
+  <div class="col-lg-12">
+        <div id="my-slider-3" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://www.bollywoodlife.com/wp-content/uploads/2017/02/pjimage-7.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/-F8spsC9eFw/maxresdefault.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/WABKRfyOvgA/maxresdefault.jpg"oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/4Ftt_sMq3MM/maxresdefault.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/AjM2eSi9C-M/maxresdefault.jpg" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+                          </div>
+    <a class="left carousel-control" href="#my-slider-3" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-3" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+      </div>                        
+    </div>
+  </div>
+
+    <h4><a class="cat" name="c4">RETRO</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-4" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i0.wp.com/www.ok945.gr/wp-content/uploads/2017/05/top-100-greatest-classic-rock-songs-of-all-time-best-rock-songs-of-70s-80s-90s-youtube-thumbnail.jpg?fit=1280%2C720" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.pinimg.com/736x/f8/d5/58/f8d5589a2f02f8b294344ae0c76135db--s-posters-s-songs.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://images-eu.ssl-images-amazon.com/images/I/61W-o2tiN2L._SS500.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/Aol_mpPsDXw/maxresdefault.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/k7iVgHGqpXQ/maxresdefault.jpg" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+                          </div>
+    <a class="left carousel-control" href="#my-slider-4" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-4" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+     </div>                         
+    </div>
+  </div>
+    <h4><a class="cat" name="c5">MOVIES</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-5" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Tamasha_%28film_poster%29.jpg/220px-Tamasha_%28film_poster%29.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/GdNKsW-E_po/maxresdefault.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://a10.gaanacdn.com/images/song/39/21236239/crop_480x480_1516001052.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://content.hungama.com/audio%20album/display%20image/300x300%20jpeg/63861609.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://pbs.twimg.com/media/DVUxrk4UQAASDEW.jpg" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+                          </div>
+    <a class="left carousel-control" href="#my-slider-5" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-5" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+</div>
+</div>
+</div>
+      <h4><a class="cat" name="c6">INTERNATIONAL</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-6" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://musicartists.org/wp-content/uploads/2014/03/Rock-Music-History.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://media-cdn.list.ly/production/599/pop_songs-0387518682.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/HVzUsMkATUU/maxresdefault.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://i.ytimg.com/vi/CipZSo9UCwU/hqdefault.jpg" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="http://caberfeidhproductions.com/wp-content/uploads/sites/44/2016/06/folk-music-constitute.jpg" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+    <a class="left carousel-control" href="#my-slider-6" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-6" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+    </div>                                  
+    </div>
+<div class="row footer">
+           <div class="col-lg-8">
+            <div class="row">
+            <div class="col-lg-3 ft">COMPANY</div>
+            <div class="col-lg-3 ft">CUSTOMER</div>
+            <div class="col-lg-3 ft">CONNECT</div>
+            </div>
+            <div class="row">
+            <div class="col-lg-3"><a href="#">ABOUT US</a></div>
+            <div class="col-lg-3"><a href="#">HELP</a></div>
+            <div class="col-lg-3"><a href="#">CONTACT US</a></div>
+            </div>
+            <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3"><a href="#">SIGN UP</a></div>
+            <div class="col-lg-3"></div>
+            </div>
+            <div class="row">
+            <div class="col-lg-12">
+                <p id="term">Copyright © 2018 XXXXXX. All rights reserved</p>
+            </div>
+            </div>
+          </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                <img src="http://www.wuggle.co.uk/media/catalog/product/c/o/colourkssmihe1597_smiley_-_headphones_-_red1.jpg" width="200px" height="120px"> </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p id="fp">At XYZ, we offer original, exclusive and premium stories. Everything you want to listen, anytime, anywhere and as much.</p>
+                 </div>
+                </div>
+                 <div class="row social">
+                    <div class="col-lg-2"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                    <div class="col-lg-2"><a href="#"><i class="fa fa-google-plus"></i></a></div>
+                    <div class="col-lg-2"><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                 </div>
+            
+        
+</div>
+</div>
+</body>

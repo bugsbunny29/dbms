@@ -1,0 +1,3 @@
+1.info.ejs is to render views corresponding to each card requests;
+2.insert.ejs is for view to insert records;
+3.login andd registration.ejs is for login and signup views;

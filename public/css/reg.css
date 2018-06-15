@@ -1,0 +1,24 @@
+body{
+font-family: cursive;
+letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://i.pinimg.com/originals/b9/28/46/b92846239cc61777b751052d0b991e3b.jpg);
+    background-repeat: no-repeat;
+    background-position: -10% 60%;
+    background-attachment: fixed;
+    background-color:black;
+	color:white;
+} 
+.btn{
+    background: linear-gradient(to right, #ff6600 0%, #ff0066 66%); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

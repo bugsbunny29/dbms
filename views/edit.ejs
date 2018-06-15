@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
+
+<style type="text/css">
+label,.text{
+  color:white;
+  background: linear-gradient(to right, #ff6600 0%, #ff0066 66%); 
+  height: 40px;
+  padding-left:10px;
+}
+#b1,#b2{
+   background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-right: 40px;
+    margin-left: -20px;
+  }
+</style>
+
+</head>
+
+<body>
+  <% include partials/nav.ejs %>
+<div class="container bg">
+  <h1 class="text control-label">Personal Information</h1>
+   <div class="col-md-9 personal-info">
+      
+        <form class="form-horizontal" role="form" action="/edit/<%=userid%>" method="post">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" name="name" value="<%=data[0].name%>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Age:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" name="age" value="<%=data[0].age%>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" name="email" value="<%=data[0].email%>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Username:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" name="username" value="<%=data[0].username%>">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="text" name="password" value="<%=data[0].password%>">
+            </div>
+          </div>
+         
+         
+          <div class="form-group">
+            <div class="col-md-8">
+              <input type="submit" class="btn btn-danger btn-lg" id="b1" value="Submit">
+              <input type="reset" class="btn btn-default btn-lg" id="b2" value="Cancel">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!doctype html>
+<head>
+<title>music</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+} 
+
+#logo{
+    margin-top:-10px;
+    height: 50px;
+    width:100px;
+}
+.cr{
+    height:500px;
+    width:100%;
+    background-image:url("https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png"); 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .a img{
+    width: 160px;
+    height:200px;
+  }
+  .dropdown-menu{
+    background-color: black;
+  }
+  .dropdown-menu li a{
+    display: block;
+    width: 160px;
+    height:60px;
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .navbar{
+    margin-bottom: 0;
+    border-top: 5px solid red;
+    background-color: black;
+    font-weight: bold;
+    font-size: 15px;
+  }
+ .navbar li a{
+    height: 60px;
+
+ }
+.hovereffect {
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+  cursor: default;
+ }
+ .overlay {
+    width: 220px;
+    overflow: hidden;
+    position: relative;
+    bottom: 100px;
+}
+
+.hovereffect img {
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+ .hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+ .cat,.cat:hover,.cat:visited{
+    color: white;
+    text-decoration-line: none;
+    margin-left:200px; 
+}
+input,button{
+    margin-top:10px; 
+}
+
+.footer{
+    border-top: 3px solid #404040;
+    height: 300px;
+    background-color: #1e1e1e;
+    margin-top: 30px;
+    padding: 40px;
+    color: white;
+    font-weight: bolder;
+}
+.footer a,a:hover,a:visited{
+  text-decoration-line: none;
+  color:white;
+}
+ .ft {
+    font-size: 17px;
+    padding-bottom: 8px;
+}
+#fp{
+ margin-top:15px; 
+}
+#term{
+    position: relative;
+    top: 130px;
+}
+</style>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img id="logo" src="http://www.wuggle.co.uk/media/catalog/product/c/o/colourkssmihe1597_smiley_-_headphones_-_red1.jpg" width="100px"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">MY MUSIC <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#c1">ARTISTS</a></li>
+          <li><a href="#c2">STAR GALLERY</a></li>
+          <li><a href="#c3">HINDI MELODIES</a></li>
+          <li><a href="#c4">RETRO</a></li>
+          <li><a href="#c5">MOVIES</a></li>
+          <li><a href="#c6">INTERNATIONAL</a></li>
+        </ul>
+      </li>
+      <li><a href="#">SUBSCRIPTION</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <li><input type="text" placeholder="search"></li>
+      <li><button><span class="glyphicon glyphicon-search"></span></button></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+        <div class="container-fluid">
+    <div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators" >
+                            <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+                            <li data-target="#my-slider" data-slide-to="1"></li>
+                            <li data-target="#my-slider" data-slide-to="2"></li>
+                        </ol>
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="cr" id="one"></div>
+                               <div class="carousel-caption">
+                                    <h1>Carousel in a container</h1>
+                                    <p>This is a demo for the Bootstrap Carousel Guide.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="cr" id="two"></div>
+                                 <div class="carousel-caption">
+                                    <h1>Carousel in a container</h1>
+                                    <p>This is a demo for the Bootstrap Carousel Guide.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                 <div class="cr" id="three"></div>
+                                 <div class="carousel-caption">
+                                    <h1>Carousel in a container</h1>
+                                    <p>This is a demo for the Bootstrap Carousel Guide.</p>
+                                </div>
+                            </div>
+    </div>
+    <a class="left carousel-control" href="#my-slider" role="button"  data-slide="prev">
+  </a>
+  <a class="right carousel-control" href="#my-slider" data-slide="next">
+  </a>
+    </div>
+    </div>
+    </div>
+<h4><a class="cat" name="c1">ARTISTS</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-1" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect">
+                                <a href="#"><img class="img-responsive" src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!"></a>
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>
+                                </div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>
+                                </div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>
+                                </div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay">
+                                <h2>Hover effect</h2>
+                                </div>   
+                                </div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!"><div class="overlay">
+                                <h2>HOVER EFFECT</h2></div></div>
+                            </div>
+    <a class="left carousel-control" href="#my-slider-1" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-1" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+                              
+    </div>
+    <h4><a class="cat" name="c2">STAR GALLERY</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-2" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+    <a class="left carousel-control" href="#my-slider-2" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-2" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+                              
+    </div>
+    <h4><a class="cat" name="c3">HINDI MELODIES</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-3" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+    <a class="left carousel-control" href="#my-slider-3" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-3" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+                              
+    </div>
+    <h4><a class="cat" name="c4">RETRO</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-4" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+    <a class="left carousel-control" href="#my-slider-4" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-4" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+                              
+    </div>
+    <h4><a class="cat" name="c5">MOVIES</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-5" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+    <a class="left carousel-control" href="#my-slider-5" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-5" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+</div>
+      <h4><a class="cat" name="c6">INTERNATIONAL</a></h4>
+<div class="row">
+            <div class="col-lg-12">
+        <div id="my-slider-6" class="carousel slide" data-ride="carousel" data-interval="false">
+                       <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="a col-lg-2"></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                                <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                                <div class="a col-lg-2"></div>
+                            </div>
+                            <div class="item">
+                                <div class="a col-lg-2"></div>
+                               <div class="a col-lg-2 hovereffect"><img class="img-responsive"  src="https://cdn.pixabay.com/photo/2014/04/02/16/23/apple-307120_960_720.png" alt="oops!">
+                               <div class="overlay"><h2>HOVER EFFECT</h2></div></div>
+                            </div>
+    <a class="left carousel-control" href="#my-slider-6" role="button"  data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left"></span> 
+  </a>
+  <a class="right carousel-control" href="#my-slider-6" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>  
+  </a>
+    </div>                                  
+    </div>
+<div class="row footer">
+           <div class="col-lg-8">
+            <div class="row">
+            <div class="col-lg-3 ft">COMPANY</div>
+            <div class="col-lg-3 ft">CUSTOMER</div>
+            <div class="col-lg-3 ft">CONNECT</div>
+            </div>
+            <div class="row">
+            <div class="col-lg-3"><a href="#">ABOUT US</a></div>
+            <div class="col-lg-3"><a href="#">HELP</a></div>
+            <div class="col-lg-3"><a href="#">CONTACT US</a></div>
+            </div>
+            <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3"><a href="#">SIGN UP</a></div>
+            <div class="col-lg-3"></div>
+            </div>
+            <div class="row">
+            <div class="col-lg-12">
+                <p id="term">Copyright © 2018 XXXXXX. All rights reserved</p>
+            </div>
+            </div>
+          </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                <img src="http://www.wuggle.co.uk/media/catalog/product/c/o/colourkssmihe1597_smiley_-_headphones_-_red1.jpg" width="200px" height="120px"> </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-lg-12">
+                        <p id="fp">At XYZ, we offer original, exclusive and premium stories. Everything you want to listen, anytime, anywhere and as much.</p>
+                 </div>
+                </div>
+                 <div class="row social">
+                    <div class="col-lg-2"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                    <div class="col-lg-2"><a href="#"><i class="fa fa-google-plus"></i></a></div>
+                    <div class="col-lg-2"><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                 </div>
+            
+        
+</div>
+</div>
+</body>
